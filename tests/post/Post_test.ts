@@ -2,6 +2,31 @@ import expect from "expect";
 
 Feature('Post');
 
+Scenario('Get all posts successfully', async ({ I }) => {
+  const response = await I.sendQuery(`query (
+    $options: PageQueryOptions
+  ) {
+    posts(options: $options) {
+      data {
+        id
+        title
+      }
+      meta {
+        totalCount
+      }
+    }
+  }`, {
+    "options": {
+      "paginate": {
+        "page": 1,
+        "limit": 5
+      }
+    }
+  });
+
+  expect(response.data.data.posts.data.length).toEqual(5);
+});
+
 Scenario('Get a post successfully', async ({ I }) => {
     const response = await I.sendQuery("query {post(id: 1) {id title body}}");
 

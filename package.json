@@ -4,13 +4,15 @@
   "description": "GraphQL fun with CodeceptJS",
   "main": "index.js",
   "scripts": {
-    "test": "codeceptjs run"
+    "test": "codeceptjs run",
+    "postinstall": "patch-package"
   },
   "author": "peterngtr",
   "license": "ISC",
   "dependencies": {
     "codeceptjs": "^3.3.6",
-    "expect": "^29.3.1"
+    "expect": "^29.3.1",
+    "patch-package": "^6.5.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.9",

@@ -1,0 +1,22 @@
+diff --git a/node_modules/codeceptjs/typings/types.d.ts b/node_modules/codeceptjs/typings/types.d.ts
+index dd3413a..7e5a3d7 100644
+--- a/node_modules/codeceptjs/typings/types.d.ts
++++ b/node_modules/codeceptjs/typings/types.d.ts
+@@ -1252,7 +1252,7 @@ declare namespace CodeceptJS {
+          * @param options - are additional query options
+          * @returns Promise<any>
+          */
+-        sendQuery(query: string, variables: any, options: any, headers: any): any;
++        sendQuery(query: string, variables?: any, options?: any, headers?: any): any;
+         /**
+          * Send query to GraphQL endpoint over http
+          *
+@@ -1277,7 +1277,7 @@ declare namespace CodeceptJS {
+          * @param options - are additional query options
+          * @returns Promise<any>
+          */
+-        sendMutation(mutation: string, variables: any, options: any, headers: any): any;
++        sendMutation(mutation: string, variables?: any, options?: any, headers?: any): any;
+     }
+     /**
+      * Helper for managing remote data using GraphQL queries.
