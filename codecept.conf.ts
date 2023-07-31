@@ -6,7 +6,9 @@ export const config: CodeceptJS.MainConfig = {
       endpoint: 'https://graphqlzero.almansi.me/api'
     }
   },
-  include: {},
+  include: {
+    I: './steps_file'
+  },
   name: 'graphql-fun',
   plugins: {
     allure: {
